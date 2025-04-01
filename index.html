@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>LLMs' Potential Influences on Our Democracy: Challenges and Opportunities</title>
+    <title>Frontier AI's Impact on the Cybersecurity Landscape: Current Status and Future Directions</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,36 +37,23 @@
     </script>
 </head>
 
-<body> <!--style="background-color: #fffbe6;">
-
-    <!-- <div style="background-color: #003262">
-        <div class="constraint">
-            <div id="header">
-                <div id="logo-container" style="padding-top: 1rem;">
-                    <a href="./" aria-label="Berkeley Logo">
-                        <img src="./assets/logo-berkeley-gold.svg" width="200" aria-label="Berkeley Logo">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div> -->
+<body> 
 
     <div> <!-- style="border-bottom:3px solid #0066cc;"-->
         <div class="constraint">
             <div style="text-align: center;">
                 <h1>
-                    LLMs' Potential Influences on Our Democracy: <br>Challenges and Opportunities</br>
+                    Frontier AI's Impact on the Cybersecurity Landscape: Current Status and Future Directions
                 </h1>
                 <p>
-                    <strong>Yujin&nbsp;Potter<sup>1</sup>, Yejin&nbsp;Choi<sup>2</sup>,
-                    David&nbsp;Rand<sup>3</sup>, Dawn&nbsp;Song<sup>1</sup></strong>
+                    <strong>Wenbo&nbsp;Guo<sup>*1</sup>, Yujin&nbsp;Potter<sup>*2</sup>, Tianneng&nbsp;Shi<sup>2</sup>, Zhun&nbsp;Wang<sup>2</sup>, Andy&nbsp;Zhang<sup>3</sup>, Dawn&nbsp;Song<sup>&dagger;2</sup></strong>
                 </p>
                 <p>
-                    <sup>1</sup>UC&nbsp;Berkeley
-                    <sup>2</sup>University&nbsp;of&nbsp;Washington
-                    <sup>3</sup>MIT 
-                    <!-- <br> -->
-                    <!-- <sup>*</sup>Corresponding author  </p>-->
+                    <sup>1</sup>UC&nbsp;San&nbsp;Diego&nbsp;&nbsp;
+                    <sup>2</sup>UC&nbsp;Berkeley&nbsp;&nbsp;
+                    <sup>3</sup>Stanford
+                    <br>
+                    * Co-first authors &nbsp;&nbsp;&dagger; Corresponding author</p>
                 
                 <!--<p style="font-size: 0.85em;">
                     <sup>*</sup>Several authors have unlisted affiliations in addition to their listed university
@@ -83,13 +70,13 @@
             margin: 0 auto 40px auto;
             padding: 20px 25px; /* Reduced vertical padding */
             background-color: #f8f9fa;
-            border-left: 4px solid #0066cc;
+            border-left: 4px solid #7F2B0A; /*#0066cc;*/
             border-radius: 4px;
         }
         .summary h2 {
             margin-top: 0;
             margin-bottom: 10px; /* Reduced space after heading */
-            color: #0066cc;
+            color: #7F2B0A; /*#0066cc; */
             font-size: 1.3rem; /* Slightly smaller heading */
         }
         .summary p {
@@ -104,7 +91,7 @@
             line-height: 26px;
         }
 		
-        .main-text div {
+    .main-text div {
 	    max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
@@ -113,6 +100,29 @@
             line-height: 26px;
 	    padding: 0 10px;
         }
+	.responsive-figure {
+		width: 90%;
+		max-width: 800px;
+		margin: 20px auto;
+		text-align: center;
+	}
+	  
+	.responsive-figure img {
+		width: 90%;
+		height: auto;
+	}
+	
+	.responsive-figure-larger {
+		width: 100%;
+		max-width: 800px;
+		margin: 20px auto;
+		text-align: center;
+	}
+	  
+	.responsive-figure-larger img {
+		width: 100%;
+		height: auto;
+	}
 
 	@media (max-width: 768px) {
             .main-text div {
@@ -134,54 +144,112 @@
 		h3 {
 			font-size: 1.4rem;        /* Increased from 1.2rem */
 		}
-        }
+		
+		.responsive-figure {
+		  max-width: 100%; /* Full width on small screens */
+		}
+		.responsive-figure-larger {
+		  max-width: 100%; /* Full width on small screens */
+		}
+    }
     </style>
 
-    <div class="summary">
+    <!-- <div class="summary">
        <h2>Summary</h2>
        <p>A growing literature [<a href="https://arxiv.org/pdf/2410.24190">Potter et al. 2024</a>, <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306621">Rozado 2024</a>, <a href="https://aclanthology.org/2023.acl-long.656/">Feng et al. 2023</a>, <a href="https://proceedings.mlr.press/v202/santurkar23a/santurkar23a.pdf">Santurkar et al. 2023</a>, <a href="https://arxiv.org/pdf/2301.01768">Hartmann et al. 2023</a>, <a href="https://arxiv.org/pdf/2410.09978">Vijay et al. 2024</a>] shows that LLMs exhibit left political leaning on a range of issues. This has sparked active discussion about LLMs' potential influences on political discourse and democratic processes. Recent papers have taken initial steps forward in exploring this question. For example, <a href="https://arxiv.org/pdf/2410.24190">Potter et al. (2024)</a> showed that interactions with LLMs can sway voters towards the Democratic candidate, even without LLMs being instructed to persuade voters. <a href="https://arxiv.org/pdf/2410.06415">Fisher et al. (2024)</a> revealed that LLMs with radical political leanings can inject their political views into users' decisions on less sensitive political topics. However, these studies only examined the immediate effects of LLMs, leaving the question of their long-term effects open. On the other hand, <a href="https://www.science.org/doi/abs/10.1126/science.adq1814">Costello et al. (2024)</a> demonstrated how LLM conversations can be used positively to durably reduce users' conspiracy beliefs. These findings highlight the importance of further studies on how LLMs may influence our democracy. Many crucial questions currently remain unanswered: What factors cause LLMs' left leaning? What goals should we set for these models? For example, should we pursue political neutrality in AI systems or some other goal(s), such as accuracy and/or pluralistic values? Is political neutrality even possible? This article discusses the path forward and proposes future research questions in four broad areas: (1) evaluation of LLM political leanings, (2) understanding LLMs’ influences on our democracy, (3) better policy frameworks for AI development, and (4) technical solutions to mitigate political leanings. As LLMs become increasingly integrated into society, continued investigation of how LLMs will reshape democracy is essential to maximize their benefits while minimizing risks to democratic processes.</p>
-    </div>
+    </div> -->
     <div class="main-text">
         <div class="features-wrapper constraint">
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-12 mt-5 paragraph-spacing">
-		    <p>As large language models (LLMs) continue to advance at a remarkable pace, understanding their societal implications has become increasingly vital. In particular, the potential influence of LLMs on political discourse has emerged as a critical area of study. Researchers in various fields such as economics, philosophy, and law have also recently voiced the importance of research in this area [<a href="https://www.amazon.com/Digitalist-Papers-Artificial-Intelligence-Democracy/dp/B0DFMH1C11">Brynjolfsson et al. 2024</a>]. Recent papers [<a href="https://arxiv.org/pdf/2410.24190">Potter et al. 2024</a>, <a href="https://arxiv.org/pdf/2410.06415">Fisher et al. 2024</a>, <a href="https://www.science.org/doi/abs/10.1126/science.adq1814">Costello et al. 2024</a>] have taken initial steps toward investigating how LLMs can influence users’ political beliefs. These findings raise important questions that need further exploration. We identify key research directions to ensure LLMs can constructively contribute to democratic processes and society.</p>
-                    <p><h3>LLMs’ Political Leanings and Their Effects on Users</h3>
-					<strong>LLMs’ Left-of-Center Outputs</strong></p>
-					<p>Much recent literature [<a href="https://arxiv.org/pdf/2410.24190">Potter et al. 2024</a>, <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306621">Rozado 2024</a>, <a href="https://aclanthology.org/2023.acl-long.656/">Feng et al. 2023</a>, <a href="https://proceedings.mlr.press/v202/santurkar23a/santurkar23a.pdf">Santurkar et al. 2023</a>, <a href="https://arxiv.org/pdf/2301.01768">Hartmann et al. 2023</a>, <a href="https://arxiv.org/pdf/2410.09978">Vijay et al. 2024</a>] has shown that LLMs exhibit left-leaning. For instance, <a href="https://arxiv.org/pdf/2410.24190">Potter et al. (2024)</a> examined LLMs' political leanings in three scenarios: (1) a voting simulation, (2) LLMs' comments on candidate policies, and (3) interactive political discourse with users in the context of the U.S. presidential election. These experiments consistently demonstrated LLMs' preference for the Democratic nominee (Joseph R. Biden, during the study period) and his policies over the Republican nominee (Donald J. Trump). In particular, despite the well-known tendency of LLMs to exhibit sycophancy bias, LLMs exhibited this political leaning regardless of their human interlocutors' political stances. Many studies [<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306621">Rozado 2024</a>, <a href="https://aclanthology.org/2023.acl-long.656/">Feng et al. 2023</a>, <a href="https://proceedings.mlr.press/v202/santurkar23a/santurkar23a.pdf">Santurkar et al. 2023</a>, <a href="https://arxiv.org/pdf/2301.01768">Hartmann et al. 2023</a>] also revealed LLMs’ left-leaning on various issues, using multiple-choice surveys and questionnaires widely employed in social science.
-					</p>
-					<p>Additionally, recent studies have documented the manifestation of LLMs’ left-leaning in various applications. For example, <a href="https://arxiv.org/pdf/2410.09978">Vijay et al. (2024)</a> showed that LLM-generated news summaries tend to highlight liberal perspectives. Similarly, <a href="https://aclanthology.org/2023.acl-long.656/">Feng et al. (2023)</a> showed that this left-leaning tendency affects their ability to detect misinformation and hate speech, with varying sensitivity based on the political orientation of source materials. These studies demonstrate LLMs’ consistent political leanings across diverse contexts.</p>
-                    <p><strong>LLMs’ Influence on Users’ Political Stances</strong></p>
-					<p>Given these documented left-leaning tendencies, society has begun discussing LLMs' potential impact on users' political views and democratic processes more broadly. However, their effect on democracy, particularly how interactions with LLMs might shape users’ political perspectives, remains largely unexplored. Recent research has examined whether direct LLM interactions can influence users’ political viewpoints.</p>
-                    <p><a href="https://arxiv.org/pdf/2410.24190">Potter et al. (2024)</a> demonstrated that even brief interactions with LLMs (which were simply asked to provide answers and comments regarding Biden and Trump's policies without any persuasive intent) could shift voters' choices in the presidential election context, where individuals typically hold firm opinions.  <a href="https://arxiv.org/pdf/2410.06415">Fisher et al. (2024)</a> demonstrated that LLMs programmed with extreme right or left-wing viewpoints can influence human decisions on unfamiliar political topics through brief conversations, illustrating how LLMs' explicit political leanings can affect users’ political stances. Additional research has explored intentional persuasion by LLMs designed to promote specific political positions or spread misinformation [<a href="https://www.anthropic.com/news/measuring-model-persuasiveness">Anthropic persuasion report 2024</a>, <a href="https://academic.oup.com/pnasnexus/article/3/2/pgae034/7610937">Goldstein et al. 2024</a>]. Notably, <a href="https://www.science.org/doi/abs/10.1126/science.adq1814">Costello et al. (2024)</a> showed that interactions with LLMs can persuade people to reduce their belief in conspiracies, including political conspiracies (e.g. related to election fraud and COVID-19), suggesting potential positive applications for such persuasive capabilities. These studies describe how LLMs could influence our democracy, highlighting the necessity of further research. However, several caveats apply to these studies. For example, because these experiments were conducted in controlled settings, the findings may not generalize to real-world applications. Moreover, these findings’ robustness and the influence of various factors, including prompt variations and experiment timing, warrant additional investigation.</p>
-                    <p><h3>The Path Forward and Future Research Questions</h3> The observed left-leaning tendencies of LLMs and their influence on users’ political perspectives raise critical questions that society must address. We highlight four key areas requiring further investigation by both researchers and society at large.</p>
-					
-					<p>
-					<strong>First, we need more comprehensive model evaluation and analysis.</strong>
-						<ul>
-                        <li><strong>When and how do LLMs manifest their political leaning?</strong> While many studies have identified LLMs' left-leaning tendencies, their responses can vary based on prompts and context. For example, <a href="https://arxiv.org/pdf/2402.16786">Röttger et al. (2024)</a> and <a href="https://arxiv.org/pdf/2402.17649">Ceron et al. (2024)</a> demonstrated that LLMs' political answers can shift depending on question framing. This suggests the need for examining LLMs’ political leanings across diverse scenarios. Additionally, as LLM applications become more widespread, understanding which specific use cases might exhibit these left-leaning tendencies becomes crucial.</li>
-                        <li><strong>What causes LLMs’ left-leaning tendencies?</strong> The complexity of model development makes identifying precise reasons why political stances emerge challenging. Training data composition likely plays a role, as it primarily consists of modern web content, that may skew liberal. Additionally, these studies [<a href="https://arxiv.org/pdf/2410.24190">Potter et al. 2024</a>, <a href="https://proceedings.mlr.press/v202/santurkar23a.html">Santurkar et al. 2023</a>, <a href="https://arxiv.org/pdf/2402.05070">Sorensen et al. 2024</a>] indicate that post-training processes may have amplified these political leanings. Specifically, instruction-tuned models show stronger left-leaning tendencies compared to their base versions, suggesting that current post-training methods increase political leanings. However, the specific aspects driving this amplification remain unclear and require further investigation. One possibility is that political orientation may be confounded with other relevant features [<a href="https://www.nature.com/articles/s41586-024-07942-8">Mosleh et al. 2024</a>, <a href="https://arxiv.org/pdf/2409.05283">Fulay et al. 2024</a>]. For example, <a href="https://arxiv.org/pdf/2409.05283">Fulay et al. (2024)</a> observed a left-leaning orientation of models trained for truthfulness, on some specific political topics such as climate change. This suggests that even apolitical fine-tuning efforts may inadvertently lead to responses that align more closely with liberal positions on certain issues. This may stem in part from truthfulness-related training data including scientific facts being more aligned with liberal positions for specific issues like climate change [<a href="https://psycnet.apa.org/record/2022-86433-001">Pennycook et al. 2023</a>, <a href="https://en.wikipedia.org/wiki/False_balance">False balance</a>]. Quantifying these contributing factors represents an essential step toward understanding the models' political leanings.</li>
-						</ul></p>
-					<p>
-						<strong>Second, we need to deepen our understanding of LLMs' influence on users and their impact on democracy.</strong>
-						<ul>
-                        <li><strong>When and how can LLMs shape users' views and affect our democratic processes?</strong> While recent papers [<a href="https://arxiv.org/pdf/2410.24190">Potter et al. 2024</a>, <a href="https://arxiv.org/pdf/2410.06415">Fisher et al. 2024</a>, <a href="https://www.science.org/doi/abs/10.1126/science.adq1814">Costello et al. 2024</a>] take a step forward in investigating this question, several crucial questions remain unresolved. Foremost, how effectively will these findings translate to real-world scenarios? For example, the observed candidate-leaning changes of voters following the LLM interaction in <a href="https://arxiv.org/pdf/2410.24190">Potter et al. (2024)</a> might not translate to actual voting behavior. Currently, no research has assessed LLMs' impact on users’ political perspectives in the wild. We call for extensive field experiments to evaluate these effects more accurately. Second, although significant changes in study participants' political stance were observed after LLM intervention [<a href="https://arxiv.org/pdf/2410.24190">Potter et al. 2024</a>, <a href="https://arxiv.org/pdf/2410.06415">Fisher et al. 2024</a>], these effects might be time-dependent. For example, political science literature [<a href="https://www.cambridge.org/core/journals/american-political-science-review/article/abs/minimal-persuasive-effects-of-campaign-contact-in-general-elections-evidence-from-49-field-experiments/753665A313C4AB433DBF7110299B7433">Kalla et al. 2017</a>] suggests that even successful political persuasion tends to diminish over time. Nevertheless, <a href="https://www.science.org/doi/abs/10.1126/science.adq1814">Costello et al. (2024)</a> demonstrated significant long-term reductions in users' conspiracy beliefs. Whether and when LLM-induced political shifts persist presents another compelling avenue for future research. Furthermore, we must explore how LLM deployment in various contexts will affect users. Understanding which applications carry greater or lesser influence on users will prove essential. Additional research should examine the conditions under which LLMs most significantly influence public opinion. </li>
-                        <li><strong>Why are LLMs able to shape users' views and affect our democratic processes?</strong> The mechanisms behind LLM’s effects on participants’ political leanings remain largely undefined. LLM interactions encompass numerous characteristics beyond their inferred political leanings, including elements like helpfulness and engagement style. Understanding their influence requires exploring how each factor might affect users’ political perspectives and determining their relative impact. For example, <a href="https://arxiv.org/pdf/2410.06415">Fisher et al. 2024</a> discovered that LLMs expressing extreme political views effectively swayed user opinions on unfamiliar political topics. Similarly, we need to investigate which other aspects (like truthfulness or helpfulness) of LLM interactions can influence people's viewpoints. Disentangling these various factors to identify the precise mechanisms of LLMs' political influence presents an ongoing challenge requiring sustained research.</li>
-						<li><strong>Should we always view LLM influence on democracy as problematic?</strong> While some might argue that any LLM influence on human perspectives is inherently concerning, recent work suggests these systems could enhance democratic processes. <a href="https://www.science.org/doi/abs/10.1126/science.adq1814">Costello et al. 2024</a> demonstrate that LLMs can effectively reduce individuals' belief in conspiracy theories. <a href="https://www.science.org/doi/10.1126/science.adq2852">Tessler et al. 2024</a> also demonstrate how LLMs can help find a middle ground in political discourses. Similarly, <a href="https://www.pnas.org/doi/10.1073/pnas.2311627120">Argyle et al. 2023</a> document LLMs' ability to elevate the quality of political discourse. These findings illustrate how LLM influence can positively contribute to democratic processes. Future research should identify the conditions that determine whether LLM influence proves beneficial or detrimental. </li>
-						</ul>
-					</p>
-                    <p><strong>Third, we need to explore better policy and value decisions for AI development.</strong> <ul>
-					<li><strong>Should we pursue AI political neutrality?</strong> The potential influence of LLMs on democratic processes raises fundamental questions about AI development trajectories. Many advocate for political neutrality in LLMs, assuming these systems should avoid any political leaning [<a href="https://www.mdpi.com/2076-0760/12/3/148">Rozado 2023</a>, <a href="https://arxiv.org/pdf/2410.09978">Vijay et al. 2024</a>]. However, political neutrality is not the only potential goal. One salient alternative is that LLMs should be as factually accurate as possible. <a href="https://www.nature.com/articles/s41586-024-07942-8">Mosleh et al. (2024)</a> showed that liberals tend to share more factually accurate content online than conservatives. This could raise the question of whether pursuing accuracy when training LLMs might contribute to the appearance of models having political leanings. For example, should the LLM represent the scientific consensus regarding the existence of human-caused climate change, or should it equally present arguments for and against human-caused climate change in the name of balance? Even if one does choose to pursue political balance, defining neutrality presents significant challenges, as human perspectives inherently carry bias [<a href="https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view/FAQ#There%27s_no_such_thing_as_objectivity">Wikipedia NPOV policy</a>, <span style="font-family: cursive">"view from nowhere"</span> from <a href="https://en.wikipedia.org/wiki/Thomas_Nagel">Thomas Nagel</a>'s phrase]. If we define neutrality as what both sides see as unbiased, the media theory [<a href="https://www.tandfonline.com/doi/full/10.1080/15205436.2015.1051234">Perloff 2015</a>] suggests that achieving true neutrality on sensitive topics may be fundamentally impossible. Given this, pursuing LLM political neutrality might be an unattainable goal. Moreover, people often gain valuable insights through engaging with different viewpoints. These considerations raise a future question of whether pursuing LLM political neutrality is truly the right path forward.
-					</li>
-					<li><strong>Should we pursue AI systems with diverse perspectives or pluralistic values?</strong> An alternative approach involves creating AI systems that embrace pluralistic values. A recent paper [<a href="https://arxiv.org/pdf/2402.05070">Sorensen et al. 2024</a>] proposed developing pluralistic AI systems capable of representing diverse human values and perspectives. But, open questions about implementation strategies remain for future research. For instance, as <a href="https://arxiv.org/pdf/2402.05070">Sorensen et al. (2024)</a> noted, implementing distributional pluralism—where AI systems reflect views in proportion to population demographics—would amplify popular opinions, even when potentially harmful or incorrect. Another promising direction involves multi-agent systems [<a href="https://arxiv.org/pdf/2402.12590">Lai et al. 2024</a>, <a href="https://arxiv.org/pdf/2406.15951">Feng et al. 2024</a>]. Such systems, comprising LLMs with diverse viewpoints, could accommodate and support various perspectives. However, significant challenges remain. Users primarily interacting with LLMs sharing specific viewpoints might reinforce existing biases. This approach could potentially be misused to systematically influence public opinion in particular directions. Additionally, LLMs designed to represent different perspectives may vary in effectiveness based on their inherent leanings. These challenges warrant careful investigation to guide AI development decisions.</li>
-					<li><strong>How can we determine appropriate policies and values?</strong> Society must systematically explore these policy and value spaces to identify better directions. This requires comprehensive analysis of potential outcomes across different policies using multiple metrics. This process involves establishing robust evaluation frameworks, including appropriate benchmarks. For example, <a href="https://arxiv.org/pdf/2402.05070">Sorensen et al. (2024)</a> have formalized pluralistic values and proposed corresponding evaluation metrics. Moreover, we need to develop stronger empirical evidence and embrace evidence-based approaches [<a href="https://understanding-ai-safety.org/">Bommasani et al. 2024</a>].</li>
-					</ul>
-                    </p>
-                    <p><strong>Fourth, we need to explore and develop various techniques including safety methods to mitigate or alter LLM political leanings.</strong><ul>
-					<li><strong>What methods effectively mitigate or alter LLMs' political leanings?</strong> Alongside exploring better policies and values, we must investigate technical solutions to mitigate or alter LLMs' political leanings. If we decide to pursue political neutrality, what methods should we use? How should we approach cases where we decide to have multiple LLMs with different political leanings? One promising approach involves representation control [<a href="https://arxiv.org/pdf/2310.01405">Zou et al. 2023</a>, <a href="https://www.anthropic.com/research/evaluating-feature-steering">Durmus et al. 2024</a>]. Assuming a political neutrality goal, <a href="https://arxiv.org/pdf/2410.24190">Potter et al. (2024)</a> applied the representation engineering developed by <a href="https://arxiv.org/pdf/2310.01405">Zou et al. (2023)</a> to both Llama-3.1-8B and 70B models, examining potential approaches to reduce LLMs’ political leaning. While these results appear promising, many open questions remain for future investigation: Can we develop methods that mitigate or alter political leaning without compromising model capabilities? How do political leanings in AI models relate to other important model characteristics? These fundamental questions require extensive future exploration.</li>
-					</ul></p>
-                    <p>Recent papers [<a href="https://arxiv.org/pdf/2410.24190">Potter et al. 2024</a>, <a href="https://arxiv.org/pdf/2410.06415">Fisher et al. 2024</a>, <a href="https://www.science.org/doi/abs/10.1126/science.adq1814">Costello et al. 2024</a>] are among the first empirical explorations of how LLM could influence the political beliefs of users, highlighting the importance of investigating how LLMs will reshape our democracy in the future. The future impact of LLMs on democracy remains an open yet crucial question that society must address. While potential risks exist, LLMs also present opportunities to strengthen democratic processes, such as reducing political polarization and facilitating constructive dialogue. The questions discussed above represent essential steps toward harnessing LLMs' potential for democratic benefit. These issues require continued investigation by the research community. Furthermore, we anticipate that LLMs' influence will extend well beyond political discourse. We encourage both the research community and society at large to thoughtfully explore these possibilities and suggested research directions above.</p>
+		    <p>AI is rapidly reshaping key sectors such as cybersecurity, healthcare, finance, and education. Frontier models are advancing at an unprecedented pace, showing striking gains in mathematics, coding, and scientific problem-solving, as illustrated in the figure below. This rapid progress brings urgent questions about a broad spectrum of AI-related risks, with cybersecurity standing out as a top concern. The current trajectory suggests AI systems may soon possess far more potent "attack capabilities" than previously expected. As frontier AI evolves, addressing the rising cybersecurity threats becomes increasingly critical.</p>
+			<figure class="responsive-figure">
+			  <img src="figures/trend.png" alt="AI trend">
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Performance changes of frontier AI models on coding, math, and science benchmarks over time.</figcaption>
+			</figure>
+			<p>Understanding frontier AI’s impact on the landscape of cybersecurity—its role in attacks, defenses, and the risks it introduces—is essential for keeping pace with its evolving capabilities, enabling early risk mitigation, and guiding policy decisions. To this end, we examine five critical questions:</p>
+			<ul>
+			<li>What methods should we use to assess the impact of frontier AI on the cybersecurity landscape?</li>
+			<li>What is its current status and real-world impact of frontier AI in cybersecurity?</li>
+			<li>Who will AI help more—attackers or defenders?</li>
+			<li>In what ways will AI reshape future system design and create new security challenges?</li>
+			<li>What should society do to better prepare for the frontier AI era in cybersecurity?</li>
+			</ul>
+            <p><h3>What Methods Should We Use to Analyze Frontier AI’s Cybersecurity Impact?</h3>
+			We propose to use a <strong><a href="https://arxiv.org/pdf/2403.07918">Marginal Risk Assessment Framework</a></strong> to systematically evaluate how frontier AI is reshaping the cybersecurity landscape across all stages of attack and defense.</p>
+			<p><strong>Marginal Risk Assessment Framework:</strong> We define the marginal risks of frontier AI as novel or heightened cyber threats that arise specifically from its misuse—extending beyond conventional attack techniques. This framework isolates AI’s distinctive contributions to the threat landscape, enabling a clearer understanding of its unique impact.
+			</p>
+			<p><strong>Comprehensive Attack Stage Coverage:</strong> To ensure thorough coverage, we break down attack stages using the well-established cyber kill chain methodology (illustrated in the figure below). We then refine these stages into granular categories based on attack targets, objectives, and methods. This structured approach enables pinpointing where AI most significantly alters the attack lifecycle.</p>
+			<figure class="responsive-figure">
+			  <img src="figures/cyberkillchain.png" alt="Cyber Kill Chain">
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Attack stages in <a href="https://ibrahimakkdag.medium.com/applied-explanation-of-the-cyber-kill-chain-model-as-a-cyber-attack-methodology-a5f666000820">cyber kill chain</a></figcaption>
+			</figure>
+			<p>Using our marginal risk assessment framework, we systematically cataloged Frontier-AI-leveraged attacks and defenses across the entire attack and defense lifecycle, drawing from hundreds of academic papers and real-world incident reports. Our review included an extensive search of literature and documented incidents to identify how AI is being applied in both offensive and defensive cybersecurity contexts. To further quantify frontier AI’s impact, we analyzed existing benchmarks specifically designed to evaluate Frontier AI’s performance in security scenarios. This quantitative analysis complements our qualitative findings, offering concrete metrics on AI’s effectiveness at each stage of the attack and defense process—highlighting both its rapid advancements and current limitations in cybersecurity applications.</p>
+			<h3>What Is the Current Status and Impact of Frontier AI in Cybersecurity?</h3>
+			<p>Frontier AI is rapidly transforming the cybersecurity landscape. Our comprehensive research provides a holistic view of how AI is currently being utilized in both offensive and defensive contexts, as presented in the following table.</p>
+			<figure class="responsive-figure-larger">
+			  <img src="figures/step_summary.png" alt="Current status quo">
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Key summaries of the current status quo for each attack and defense step. The colors of the first column represent different levels of impact for the corresponding attack/defense step: Green—no demonstrated effect, Yellow—demonstrated in research papers, Orange—demonstrated in the real world, and Red—the large-scale real world.</a></figcaption>
+			</figure>
+			<p><strong>For attacks against systems</strong>, our research reveals a nuanced picture of AI-enabled attacks on systems. While AI-driven attacks have been successfully demonstrated in research settings, they have yet to make a significant impact at scale in real-world scenarios. Currently, the most advanced real-world applications of AI in offensive security are concentrated in the reconnaissance, weaponization, and final execution phases, with limited use in intermediate steps.</p>
+			<p>Benchmark evaluations show uneven AI performance across the attack lifecycle. In reconnaissance, basic AI agents—such as LLMs with tool access—already perform effectively, identifying targets on remote networks and conducting surveillance. In the weaponization phase, capabilities are advancing but remain constrained: state-of-the-art commercial models like OpenAI-o1 and Claude 3.5 Sonnet can rival technical novices or cybersecurity apprentices in exploiting vulnerabilities. However, AI performance drops off significantly in later stages. For example, while GPT-4o can generate multi-stage attack sequences, it consistently shows low success rates.</p>
+			<p>These findings underscore a key reality: <em>Despite recent breakthroughs in frontier AI, its practical offensive capabilities remain limited—particularly when it comes to executing full end-to-end cyberattacks.</em></p>
+			<p><strong>For attacks targeting humans</strong>, the landscape is far more alarming. AI is already being used in large-scale, real-world operations for advanced social engineering, deepfakes, and misinformation campaigns. Since the rise of tools like ChatGPT, incidents of social engineering have surged by 135%, and voice phishing by 260%, according to recent studies. Among these threats, deepfakes stand out as particularly dangerous—for example, Hong Kong authorities reported attackers using <a href="https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk/index.html">AI-generated deepfakes to impersonate a CFO</a> in a video call, successfully stealing $25 million.</p>
+			<p>AI capabilities in this domain are advancing rapidly and along a troubling trajectory. While studies in 2023 and mid-2024 found AI-generated phishing less effective than human-crafted versions, newer research from late 2024 onward shows that fully automated AI phishing can now rival expert human attackers in effectiveness.</p>
+			<p><strong>For cyber defenses</strong>, frontier AI has primarily been applied to proactive testing and attack detection, with limited adoption in vulnerability triage and very little or virtually none in remediation development or deployment—even in research. While AI holds potential for enhancing automated defenses, key challenges remain around robustness, transparency, and generalizability.</p>
+			<p>One of the most persistent hurdles is the slow pace of remediation deployment, which still relies heavily on manual processes; for example, study shows that hospitals currently average 471 days to fully implement patches. As frontier AI matures, it could help dramatically shorten this timeline, narrowing the vulnerability window. However, this shift is likely to be gradual and long-term—not an immediate fix.</p>
+			<h3>Who Will AI Help More—Attackers or Defenders?</h3>
+			<p>We argue that <strong>frontier AI will likely benefit attackers more than defenders in the short term</strong> due to three key factors:</p>
+			<ul>
+			<li><strong>Equivalence Classes:</strong> Many AI capabilities designed for defense can be readily repurposed for offensive use. For example, techniques developed for penetration testing can enhance targeted attacks, and AI-generated patches may inadvertently aid exploit development. The table below shows examples of the key equivalence classes we identified in this dual-use context.</li>
+			<figure class="responsive-figure-larger">
+			  <img src="figures/equivalence.png" alt="Equivalence">
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Equivalence classes: A list of defense and general capabilities that can also help attacks</a></figcaption>
+			</figure>
+			<li><strong>Fundamental Asymmetry:</strong> Beyond dual-use capabilities, a core asymmetry between attackers and defenders gives adversaries a disproportionate edge when leveraging frontier AI. This imbalance is driven by three key factors:</li>
+			<ul><li>Asymmetric Stakes: Attackers need only one successful exploit, while defenders must protect against every attack. This low margin for error severely constrains defensive strategies. In AI-powered threat detection, both false positives and false negatives are costly—false positives disrupt operations, while a single false negative can compromise an entire system.</li>
+			<li>Remediation cost and lag: Even with known fixes, remediation is slow and resource-intensive to deploy, requiring extensive testing, dependency resolution, global deployment, and post-deployment verification—all demanding significant resources and time. In contrast, attackers can operate with minimal resource requirements and compressed timelines, exploiting the gap between vulnerability discovery and complete patch deployment.</li>
+			<li>Divergent Goals: Defenders aim for reliability and comprehensive protection; attackers optimize for scale and impact. AI lowers barriers for attackers—reducing the need for deep expertise, specific target knowledge, or precise execution. A failed attack on one system can still succeed across many others. Meanwhile, AI’s current limitations in robustness, transparency, and generalizability make defenders hesitant to fully trust and deploy these technologies in security-critical environments.</li></ul>
+			<li><strong>Economic Impact:</strong> As AI reduces the expertise needed for cyberattacks and automates complex operations, adversaries can launch more frequent, sophisticated, and stealthy campaigns at low cost. More importantly, AI is beginning to fundamentally alter the cost structure of cyberattacks—enabling novel attack types and attack chains that were previously too complex, resource-intensive, or unscalable to be viable. This opens the door to entirely new threat vectors that challenge existing defense paradigms. Meanwhile, defenders face rising expenses to keep up—especially as traditional defenses become less effective against AI-powered threats. The challenge is compounded by slow, resource-intensive remediation processes that hinder timely responses.</li>
+			<li>This growing cost imbalance puts resource-limited organizations at particular risk. When the cost of defense exceeds the perceived value of the assets being protected, some may scale back or abandon certain protective measures. This creates a dangerous dynamic: as defense weakens, attackers enjoy greater returns on minimal investment—potentially triggering a downward spiral in overall cybersecurity resilience.</li>
+			</ul>
+			<strong>Long-Term Shift Toward Defenders:</strong> While attackers currently benefit from AI-driven advantages, this imbalance may gradually shift in favor of defenders as advanced techniques mature, remediation becomes more automated, and systems grow more resilient—making new vulnerabilities increasingly difficult to exploit.
+			<ul><li><strong>Strengthening Defensive Leverage:</strong> As frontier AI models advance, early access—often granted to large enterprises and government agencies—gives defenders a critical advantage in proactively identifying and patching vulnerabilities. With AI-driven automation accelerating this process, systems steadily evolve to become more robust, with fewer exploitable flaws.</li> 
+			<li><strong>Secure-by-design with provable guarantees:</strong> Furthermore, by leveraging AI for formal verification and adopting a secure-by-design approach, defenders can build fundamentally more secure systems with provable guarantees.</li>
+			<li><strong>Change of attack economics:</strong> This continuous improvement raises the bar for attackers, making the discovery of new vulnerabilities increasingly difficult and resource-intensive. Over time, attackers face diminishing returns, as discovering new vulnerabilities becomes increasingly difficult and resource-intensive—rendering many attack strategies impractical or economically unviable.</li></ul>
+			<h3>How Will AI Transform Future System Design and Introduce New Security Challenges?</h3>
+			<p><strong>Security Challenges in Hybrid AI Systems:</strong> The integration of frontier AI into traditional software is giving rise to a new class of hybrid systems—architectures that combine foundation models with non-ML components such as programming logic, databases, and traditional software services. These systems introduce distinct security challenges that extend beyond those of traditional or purely AI-based systems.</p>
+			<ul><li><strong>Architectural Complexity:</strong> The fusion of AI models with symbolic components creates novel integration points that expand the attack surface. Hybrid systems are exposed to both conventional cyber threats and AI-specific vulnerabilities, increasing the complexity of securing them end-to-end.</li>
+			<li><strong>Emerging Attack Vectors:</strong> Unique risks include indirect prompt injection (where malicious prompts are embedded to influence AI behavior), AI-to-symbolic attacks (where manipulated AI outputs compromise downstream systems), and new forms of data poisoning that exploit the interaction between AI and symbolic logic.</li>
+			<li><strong>Gaps in Defense:</strong> Most existing defenses on AI focus on protecting the model itself, leaving system-level vulnerabilities largely unaddressed. Robust, provable security frameworks for hybrid systems remain underdeveloped.</li></ul>
+			<p>As hybrid systems become more widespread, their growing attack surface will demand entirely new security paradigms—ones specifically tailored to the dynamic, hybrid nature of these architectures.</p>
+			<h3>What Should Society Do to Better Prepare for the Frontier AI Era in Cybersecurity?</h3>
+			<p>Based on our findings, we recommend the following key actions for the security community.</p>
+			<p><strong>Comprehensive Marginal Risk Assessment:</strong> There is a pressing need to develop comprehensive, fine-grained benchmarks that rigorously evaluate AI capabilities across the full range of attack stages and hybrid system vulnerabilities. As illustrated in the following two tables, no comprehensive benchmark currently exists for assessing AI’s cybersecurity capabilities—highlighting a critical gap. High-quality benchmarks are essential, as they provide the foundation for quantifying AI-driven risks and informing key decisions. To be effective, these benchmarks must prioritize realism, ensuring that tasks and metrics reflect actual security challenges and capabilities. Just as importantly, they must be continuously updated to keep pace with the rapid evolution of frontier AI systems.</p>
+			<figure class="responsive-figure-larger">
+			  <img src="figures/attack_benchmark.png" alt="attack benchmark">
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing attack benchmarks. The fully-filled, half-filled, empty circles mean all sub-steps are fully, partially, or not covered, respectively.</a></figcaption>
+			</figure>
+			<figure class="responsive-figure-larger">
+			  <img src="figures/defense_benchmark.png" alt="defense benchmark">
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing defense benchmarks. "Vul. D" and "Att. D" refer to vulnerability detection and attack detection. "RT" is root cause and "RE" is reverse engineering. "Re. dev." and "Re. dep." stands for remediation development and remediation deployment.</a></figcaption>
+			</figure>
+			<p><strong>Enhanced Defense Development:</strong> To stay ahead of rapidly evolving threats, we recommend strategically leveraging frontier AI to strengthen every phase of the cybersecurity defense lifecycle.</p>
+			<ul><li></strong>Proactive Testing:</strong> Frontier AI can transform vulnerability discovery by augmenting and extending traditional methods. Promising approaches include: designing advanced penetration testing and bug finding agents with robust planning capabilities, diverse toolsets, and strong program reasoning abilities; enhancing static analysis using AI-driven state pruning and automated analysis; fine-tuning models specialized in reasoning about program behavior; and improving fuzzing via intelligent seed generation, adaptive mutation strategies, and grammar discovery. Together, these techniques can significantly improve our ability to identify vulnerabilities before attackers do.</li>
+			<li></strong>AI-Augmented Threat Detection:</strong> As cyber threats grow more dynamic, detection systems must evolve accordingly. Security-specific learning methods should be developed to handle challenges such as attack pattern shifts and data drift. Combining AI-based detection with traditional rule-based systems can balance robustness, error tolerance, and scalability. To build trust and improve incident response, enhanced interpretability—through explainable alerts and actionable insights—should be a core design goal.</li>
+			<li><strong>Automated Triage and Remediation:</strong> One of the most significant security improvements will come from automating the labor-intensive processes of vulnerability triage and remediation. We recommend building multi-agent systems that combine AI planning with traditional program analysis tools for comprehensive root cause analysis, developing patching agents with formal security and correctness guarantees, training specialized models for generating accurate fixes, and leveraging AI for automating deployment through intelligent test generation, configuration management, and dependency conflict resolution.</li>
+			<li><strong>Provable Security Through AI:</strong> To advance beyond reactive defenses and bug finding, frontier AI should be integrated with formal verification techniques to enable secure-by-design to build secure systems with provable guarantees. This includes training models to automate theorem proving, using foundation models to produce verification artifacts like invariants and function summaries, improving constraint solver performance with AI-based planning, and designing specialized frameworks to provide formal guarantees for hybrid systems. This fusion of AI and formal methods opens the door to a new generation of provably secure software.</li></ul>
+			<p><strong>Secure Hybrid System Design:</strong> Securing hybrid systems—those combining AI modules with traditional symbolic components—requires both specialized defenses and a secure-by-design paradigm. We recommend developing dedicated frameworks and design principles that directly address the unique security issues introduced by the integration of AI and conventional software. Real-time monitoring and alerting mechanisms should also be embedded to detect and respond to emerging threats post-deployment.</p>
+			<p>In the long term, achieving provable security guarantees for hybrid systems is essential. A promising direction is to decompose the verification process into targeted sub-goals for AI and symbolic components, leveraging domain-specific techniques for each. Successfully securing these complex systems will require sustained, collaborative innovation across the security, AI, and programming languages communities.</p>
+			<p><strong>Strengthened AI Development Practices:</strong> Rigorous testing of each new model’s cybersecurity risks should be a standard part of the development process. Before release, models must be evaluated for their potential to enable or carry out cyberattacks. As more robust benchmarks emerge, developers should broaden their evaluations and collaborate with white-hat hackers to simulate real-world scenarios.</p>
+			<p>We also recommend embedding red-teaming practices throughout the AI development pipeline—especially for hybrid systems, where AI and symbolic components interact in complex ways. Equally important is <a href="https://understanding-ai-safety.org/">transparency</a>: clear documentation of development practices can inform better policy and risk governance. One viable approach is tiered transparency, where information is disclosed at varying levels to the public, trusted third parties, and government agencies. However, implementing this framework presents real challenges, highlighting the delicate balance between openness and security.</p>
+			<p><strong>Mitigating Human-Related Risks:</strong> Frontier AI has dramatically increased the scale, precision, and sophistication of human-targeted attacks—causing widespread harm and exposing a critical need for new mitigation strategies. Addressing these threats must begin with improved education for both users and developers, emphasizing AI-driven attack vectors and fundamental security best practices. Studies show that poor security awareness among users and limited expertise among developers significantly heighten risk and impact.</p>
+			<p>AI itself can be part of the solution—enabling more personalized, adaptive security training. However, education alone is not enough. Humans remain a persistent vulnerability, and the pace of AI-enhanced attacks increasingly outstrips traditional defenses. To keep up, cybersecurity research must shift its focus toward detecting and countering AI-enabled threats, not just reinforcing protections against conventional attacks.</p>
+			<p>One important direction is to use AI to serve as a direct countermeasure against AI-enabled attacks. Recent research demonstrates promising strategies such as deploying "AI nannies" or defensive bots that engage attacker-controlled AI agents in conversation, effectively wasting their time and computational resources. Developing such active, AI-based countermeasures is an emerging and essential frontier in defense.</p>
+			<p>By prioritizing new tools, techniques, and strategies tailored to the human-related risks of frontier AI, the security community can better safeguard individuals—and help ensure that AI becomes a net positive for cybersecurity in the long run.</p>
+			<br><br>
+			<p><em><strong>By taking proactive and coordinated steps—advancing defenses, developing robust benchmarks, securing hybrid systems, and mitigating human-targeted risks—the cybersecurity community can shape a future where frontier AI strengthens rather than undermines digital security. While the challenges are significant, thoughtful action today can ensure that AI becomes a powerful force for resilience, not risk.</strong></em></p>
                 </div>
             </div>
         </div>
@@ -217,20 +285,6 @@
         </style>
 
     </div>
-
-    <!-- <div id="bottom">
-        <div id="footer">
-            <div id="footer-text-container">
-                <p class="footer-text">
-                    For general inquiries, <a class="footer-text" href="mailto:rdi@berkeley.edu">reach us by
-                        email.</a>
-                </p>
-                <p class="footer-text">
-                    © UC Regents 2024.
-                </p>
-            </div>
-        </div>
-    </div> -->
 
 </body>
 
