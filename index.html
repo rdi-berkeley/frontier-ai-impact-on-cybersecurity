@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Frontier AI's Impact on the Cybersecurity Landscape: Current Status and Future Directions</title>
+    <title>Frontier AI's Impact on the Cybersecurity Landscape</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <!-- Twitter Meta Tags -->
+    <!-- Twitter Meta Tags 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="democracy-with-llm.org">
     <meta property="twitter:url" content="https://future-of-democracy-with-llm.org/">
     <meta name="twitter:title" content="LLMs' Potential Influences on Our Democracy: Challenges and Opportunities">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="https://future-of-democracy-with-llm.org/assets/image2.png">
+    <meta name="twitter:image" content="https://future-of-democracy-with-llm.org/assets/image2.png">-->
 
     <!--
     <script src="./assets/js/splide.min.js"></script>
@@ -165,7 +165,7 @@
                 <div class="col-12 mt-5 paragraph-spacing">
 		    <p>AI is rapidly reshaping key sectors such as cybersecurity, healthcare, finance, and education. Frontier models are advancing at an unprecedented pace, showing striking gains in mathematics, coding, and scientific problem-solving, as illustrated in the figure below. This rapid progress brings urgent questions about a broad spectrum of AI-related risks, with cybersecurity standing out as a top concern. The current trajectory suggests AI systems may soon possess far more potent "attack capabilities" than previously expected. As frontier AI evolves, addressing the rising cybersecurity threats becomes increasingly critical.</p>
 			<figure class="responsive-figure">
-			  <img src="figures/trend.png" alt="AI trend">
+			  <img src="figures/trend.PNG" alt="AI trend">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Performance changes of frontier AI models on coding, math, and science benchmarks over time.</figcaption>
 			</figure>
 			<p>Understanding frontier AI’s impact on the landscape of cybersecurity—its role in attacks, defenses, and the risks it introduces—is essential for keeping pace with its evolving capabilities, enabling early risk mitigation, and guiding policy decisions. To this end, we examine five critical questions:</p>
@@ -182,14 +182,14 @@
 			</p>
 			<p><strong>Comprehensive Attack Stage Coverage:</strong> To ensure thorough coverage, we break down attack stages using the well-established cyber kill chain methodology (illustrated in the figure below). We then refine these stages into granular categories based on attack targets, objectives, and methods. This structured approach enables pinpointing where AI most significantly alters the attack lifecycle.</p>
 			<figure class="responsive-figure">
-			  <img src="figures/cyberkillchain.png" alt="Cyber Kill Chain">
+			  <img src="figures/cyberkillchain.PNG" alt="Cyber Kill Chain">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Attack stages in <a href="https://ibrahimakkdag.medium.com/applied-explanation-of-the-cyber-kill-chain-model-as-a-cyber-attack-methodology-a5f666000820">cyber kill chain</a></figcaption>
 			</figure>
 			<p>Using our marginal risk assessment framework, we systematically cataloged Frontier-AI-leveraged attacks and defenses across the entire attack and defense lifecycle, drawing from hundreds of academic papers and real-world incident reports. Our review included an extensive search of literature and documented incidents to identify how AI is being applied in both offensive and defensive cybersecurity contexts. To further quantify frontier AI’s impact, we analyzed existing benchmarks specifically designed to evaluate Frontier AI’s performance in security scenarios. This quantitative analysis complements our qualitative findings, offering concrete metrics on AI’s effectiveness at each stage of the attack and defense process—highlighting both its rapid advancements and current limitations in cybersecurity applications.</p>
 			<h3>What Is the Current Status and Impact of Frontier AI in Cybersecurity?</h3>
 			<p>Frontier AI is rapidly transforming the cybersecurity landscape. Our comprehensive research provides a holistic view of how AI is currently being utilized in both offensive and defensive contexts, as presented in the following table.</p>
 			<figure class="responsive-figure-larger">
-			  <img src="figures/step_summary.png" alt="Current status quo">
+			  <img src="figures/step_summary.PNG" alt="Current status quo">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Key summaries of the current status quo for each attack and defense step. The colors of the first column represent different levels of impact for the corresponding attack/defense step: Green—no demonstrated effect, Yellow—demonstrated in research papers, Orange—demonstrated in the real world, and Red—the large-scale real world.</a></figcaption>
 			</figure>
 			<p><strong>For attacks against systems</strong>, our research reveals a nuanced picture of AI-enabled attacks on systems. While AI-driven attacks have been successfully demonstrated in research settings, they have yet to make a significant impact at scale in real-world scenarios. Currently, the most advanced real-world applications of AI in offensive security are concentrated in the reconnaissance, weaponization, and final execution phases, with limited use in intermediate steps.</p>
@@ -204,7 +204,7 @@
 			<ul>
 			<li><strong>Equivalence Classes:</strong> Many AI capabilities designed for defense can be readily repurposed for offensive use. For example, techniques developed for penetration testing can enhance targeted attacks, and AI-generated patches may inadvertently aid exploit development. The table below shows examples of the key equivalence classes we identified in this dual-use context.</li>
 			<figure class="responsive-figure-larger">
-			  <img src="figures/equivalence.png" alt="Equivalence">
+			  <img src="figures/equivalence.PNG" alt="Equivalence">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Equivalence classes: A list of defense and general capabilities that can also help attacks</a></figcaption>
 			</figure>
 			<li><strong>Fundamental Asymmetry:</strong> Beyond dual-use capabilities, a core asymmetry between attackers and defenders gives adversaries a disproportionate edge when leveraging frontier AI. This imbalance is driven by three key factors:</li>
@@ -228,11 +228,11 @@
 			<p>Based on our findings, we recommend the following key actions for the security community.</p>
 			<p><strong>Comprehensive Marginal Risk Assessment:</strong> There is a pressing need to develop comprehensive, fine-grained benchmarks that rigorously evaluate AI capabilities across the full range of attack stages and hybrid system vulnerabilities. As illustrated in the following two tables, no comprehensive benchmark currently exists for assessing AI’s cybersecurity capabilities—highlighting a critical gap. High-quality benchmarks are essential, as they provide the foundation for quantifying AI-driven risks and informing key decisions. To be effective, these benchmarks must prioritize realism, ensuring that tasks and metrics reflect actual security challenges and capabilities. Just as importantly, they must be continuously updated to keep pace with the rapid evolution of frontier AI systems.</p>
 			<figure class="responsive-figure-larger">
-			  <img src="figures/attack_benchmark.png" alt="attack benchmark">
+			  <img src="figures/attack_benchmark.PNG" alt="attack benchmark">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing attack benchmarks. The fully-filled, half-filled, empty circles mean all sub-steps are fully, partially, or not covered, respectively.</a></figcaption>
 			</figure>
 			<figure class="responsive-figure-larger">
-			  <img src="figures/defense_benchmark.png" alt="defense benchmark">
+			  <img src="figures/defense_benchmark.PNG" alt="defense benchmark">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing defense benchmarks. "Vul. D" and "Att. D" refer to vulnerability detection and attack detection. "RT" is root cause and "RE" is reverse engineering. "Re. dev." and "Re. dep." stands for remediation development and remediation deployment.</a></figcaption>
 			</figure>
 			<p><strong>Enhanced Defense Development:</strong> To stay ahead of rapidly evolving threats, we recommend strategically leveraging frontier AI to strengthen every phase of the cybersecurity defense lifecycle.</p>
