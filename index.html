@@ -66,24 +66,24 @@
 
     <style>
 	.summary {
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            padding: 20px 25px; /* Reduced vertical padding */
-            background-color: #F5F5F5; /*#f8f9fa;*/
-            border-left: 4px solid #7F2B0A; /*#0066cc;*/
-            border-radius: 4px;
-        }
-        .summary h2 {
-            margin-top: 0;
-            margin-bottom: 10px; /* Reduced space after heading */
-            color: #7F2B0A; /*#0066cc; */
-            font-size: 1.3rem; /* Slightly smaller heading */
-        }
-        .summary p {
-            margin: 0; /* Remove default paragraph margins */
-            font-size: 1.1rem; /* Slightly smaller text */
-            line-height: 1.5; /* Slightly tighter line height */
-        }
+		max-width: 800px;
+		margin: 0 auto 40px auto;
+		padding: 20px 25px; /* Reduced vertical padding */
+		background-color: #F5F5F5; /*#f8f9fa;*/
+		border-left: 4px solid #7F2B0A; /*#0066cc;*/
+		border-radius: 4px;
+	}
+	.summary h2 {
+		margin-top: 0;
+		margin-bottom: 10px; /* Reduced space after heading */
+		color: #7F2B0A; /*#0066cc; */
+		font-size: 1.3rem; /* Slightly smaller heading */
+	}
+	.summary p {
+		margin: 0; /* Remove default paragraph margins */
+		font-size: 1.1rem; /* Slightly smaller text */
+		line-height: 1.5; /* Slightly tighter line height */
+	}
 	.main-content {
             margin: 45px auto 0;
             padding: 0 10px;
@@ -123,9 +123,96 @@
 		width: 100%;
 		height: auto;
 	}
+	
+	table {
+      width: 100%;
+      max-width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+	
+	th, td {
+      padding: 8px 12px;
+      border: 1px solid #000;
+      vertical-align: top;
+    }
+	
+	/* Header style */
+    thead th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    /* Example row colors (adjust as desired) */
+    /* Attack steps */
+    .attack-step-1 {
+      background-color: #FFBB94; /* Light orange */
+    }
+    .attack-step-2 {
+      background-color: #FFBB94; /* Slightly darker orange */
+    }
+    .attack-step-3-5 {
+      background-color: #FFBB94; 
+    }
+    .attack-step-6 {
+      background-color: #FFBB94;
+    }
+    .attack-step-7 {
+      background-color: #FF9999; /* Red */
+    }
+    .attack-against-humans {
+      background-color: #FF9999; /* Same red */
+    }
+
+    /* Defense steps */
+    .defense-step-1 {
+      background-color: #FFBB94;
+    }
+    .defense-step-2 {
+      background-color: #FFBB94; 
+    }
+    .defense-step-3 {
+      background-color: #FFFF99;
+    }
+    .defense-step-4-5 {
+      background-color: #B2FFB2;
+    }
+    .defense-for-humans {
+      background-color: #FFBB94;
+    }
+
+    /* Optional: make text wrap nicely */
+    td {
+      word-wrap: break-word;
+    }
+	.circle {
+		display: inline-block;
+		width: 0.8em;
+		height: 0.8em;
+		border-radius: 50%;
+		background-color: black;
+	  }
+	 .empty-circle {
+		display: inline-block;
+		width: 0.8em;
+		height: 0.8em;
+		border-radius: 50%;
+		background-color: white;
+		border: 1px solid black;
+	  } 
+	.half-circle {
+      display: inline-block;
+      width: 0.8em;
+      height: 0.8em;
+      border-radius: 50%;
+      background: linear-gradient(90deg, black 50%, white 50%);
+      border: 1px solid black; /* ensures the circle has an outline */
+    }
 
 	@media (max-width: 768px) {
-            .main-text div {
+        .main-text div {
 			max-width: calc(100% - 6vw);
 			margin-left: auto;
 			margin-right: auto;
@@ -145,6 +232,10 @@
 			font-size: 1.4rem;        /* Increased from 1.2rem */
 		}
 		
+		.table {
+		  max-width: 100%; 
+		}
+		
 		.responsive-figure {
 		  max-width: 100%; /* Full width on small screens */
 		}
@@ -157,7 +248,7 @@
     <div class="summary">
        <h2>Executive Summary</h2>
        <p>We present a comprehensive analysis of frontier AI's impact on cybersecurity using a marginal risk assessment framework and the cyber kill chain. Our findings indicate that while the overall impact of frontier AI is currently limited across various stages of both attack and defense, its influence on the attack side is markedly more pronounced. In particular, human-targeted attacks leveraging frontier AI are already occurring on a large scale in the real world.</p><br>
-	   <p><strong>In the near term, we argue that attackers are likely to benefit more than defenders from frontier AI.</strong> However, with a collaborative effort of the community—through enhanced risk assessment, smarter defense design and integration, secure-by-design system development—the balance could eventually tip in favor of defenders. This paper not only serves as a <strong>wake-up call</strong> but also outlines a <strong>roadmap for action</strong>: frontier AI is dramatically reshaping cybersecurity, with attackers already exploiting its capabilities. Defenders must act swiftly to harness AI's strengths while mitigating its risks.</p><br>
+	   <p><strong>In the near term, we argue that attackers are likely to benefit more than defenders from frontier AI.</strong> However, with a collaborative effort of the community—through enhanced risk assessment, smarter defense design and integration, and secure-by-design system development—the balance could eventually tip in favor of defenders. This paper not only serves as a <strong>wake-up call</strong> but also outlines a <strong>roadmap for action</strong>: frontier AI is dramatically reshaping cybersecurity, with attackers already exploiting its capabilities. Defenders must act swiftly to harness AI's strengths while mitigating its risks.</p><br>
 	   <p>We offer actionable recommendations: Constructing comprehensive fine-grained benchmarks for risk assessment, designing customized LLMs and AI agents for defense, developing robust security mechanisms and provable defenses for hybrid systems, enhancing pre-deployment security testing and ensuring transparency, and strengthening defenses for end users.</p><br>
 	   <p>By anticipating emerging trends and fostering collaboration among AI researchers, cybersecurity practitioners, and policymakers, we can navigate the AI revolution in a way that ultimately strengthens security for all.</p>
     </div> 
@@ -191,11 +282,137 @@
 			</figure>
 			<p>Using our marginal risk assessment framework, we systematically cataloged Frontier-AI-leveraged attacks and defenses across the entire attack and defense lifecycle, drawing from hundreds of academic papers and real-world incident reports. Our review included an extensive search of literature and documented incidents to identify how AI is being applied in both offensive and defensive cybersecurity contexts. To further quantify frontier AI’s impact, we analyzed existing benchmarks specifically designed to evaluate performance in security scenarios. This quantitative analysis complements our qualitative findings, offering concrete metrics on AI’s effectiveness at each stage of the attack and defense process—highlighting both its rapid advancements and current limitations in cybersecurity applications.</p>
 			<h3>What Is the Current Status and Impact of Frontier AI in Cybersecurity?</h3>
-			<p>Frontier AI is rapidly transforming the cybersecurity landscape. Our comprehensive research provides a holistic view of how AI is currently being utilized in both offensive and defensive contexts, as presented in the following table.</p>
-			<figure class="responsive-figure-larger">
+			<p>Frontier AI is rapidly transforming the cybersecurity landscape. Our research provides a holistic view of how AI is currently being utilized in both offensive and defensive contexts, as presented in the following table.</p>
+			<!--<figure class="responsive-figure-larger">
 			  <img src="figures/step_summary.PNG" alt="Current status quo">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Key summaries of the current status quo for each attack and defense step. The colors of the first column represent different levels of impact for the corresponding attack/defense step: Green—no demonstrated effect, Yellow—demonstrated in research papers, Orange—demonstrated in the real world, and Red—the large-scale real world. This reveals that defense stages have benefited substantially less from frontier AI compared to attack stages.</figcaption>
-			</figure>
+			</figure>-->
+			<table>
+			<caption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">
+				Key summaries of the current status quo for each attack and defense step. 
+				The colors represent different levels of impact: 
+				<strong>Green</strong>—no demonstrated effect, 
+				<strong>Yellow</strong>—demonstrated in research papers, 
+				<strong>Orange</strong>—demonstrated in the real world, and 
+				<strong>Red</strong>—large-scale real world. 
+				This reveals that defense stages have benefited substantially less from frontier AI compared to attack stages.
+			  </caption>
+			  <thead>
+				<tr>
+				  <th style="width: 30%; text-align: center;">Attack Steps</th>
+				  <th style="width: 70%; text-align: center;">Summary</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<!-- Step 1 -->
+				<tr class="attack-step-1">
+				  <td style="vertical-align: middle;"><strong>Step 1: Reconnaissance<br>(Demonstrated in the real world)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Both research and real-world attacks leverage LLMs in reconnaissance, 
+					including active scanning, victim information gathering, and open-source database search.<br>
+					<strong>Quantitative:</strong> Current benchmarks rely primarily on text-based prompts, while practical evaluations like AutoPenBench show AI agents’ potential in reconnaissance but still limited.
+				  </td>
+				</tr>
+				<!-- Step 2 -->
+				<tr class="attack-step-2">
+				  <td style="vertical-align: middle;"><strong>Step 2: Weaponization<br>(Demonstrated in the real world)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Research papers show LLMs can generate functional malware with high evasion rates 
+					and AI agents aid vulnerability identification and exploitation, although large-scale real-world attacks remain limited to simpler attacks like DDoS, SQL injection, etc.<br>
+					<strong>Quantitative:</strong> “RedCode” benchmark reveals LLMs’ limitations in generating functional malware. Vulnerability exploitation benchmarks show Claude 3.5 Sonnet achieving cybersecurity practitioner-level 
+					skills but falling short of expert capabilities.
+				  </td>
+				</tr>
+				<!-- Step 3-5 -->
+				<tr class="attack-step-3-5">
+				  <td style="vertical-align: middle;"><strong>Step 3-5: Delivery &amp; exploitation &amp; installation<br>(Demonstrated in the real world)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Initial access and exploitation (installation) are demonstrated in the real world 
+					while persistence remains at research level.<br>
+					<strong>Quantitative:</strong> Benchmark coverage and quality for this attack step are very limited.
+				  </td>
+				</tr>
+				<!-- Step 6 -->
+				<tr class="attack-step-6">
+				  <td style="vertical-align: middle;"><strong>Step 6: Command and control<br>(Demonstrated in the real world)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Most sub-categories have been demonstrated only in research papers, e.g., privilege escalation 
+					through exploit chain generation, and command and control through automated domain generation, while credential access is used in the real world.<br>
+					<strong>Quantitative:</strong> Benchmark coverage and quality for these attack steps are very limited.
+				  </td>
+				</tr>
+				<!-- Step 7 -->
+				<tr class="attack-step-7">
+				  <td style="vertical-align: middle;"><strong>Step 7: Action on objectives<br>(Large-scale real world impact)</strong></td>
+				  <td>
+					Real-world AI-enhanced attacks increase across various systems (Web, mobile, cloud), with malicious purposes 
+					including malware deployment, business logic abuse, and credential theft, causing significant financial losses 
+					and data breaches.
+				  </td>
+				</tr>
+				<!-- Attacks against humans -->
+				<tr class="attack-against-humans">
+				  <td style="vertical-align: middle;"><strong>Attacks against humans<br>(Large-scale real world impact)</strong></td>
+				  <td>
+					Frontier AI escalates attacks against humans, with studies showing increases in social engineering (135%) and voice phishing (260%) since ChatGPT's adoption. AI is misused for identity theft, deepfake-based fraud, child exploitation, and psychological manipulation.
+				  </td>
+				</tr>
+			  </tbody>
+			
+			  <thead>
+				<tr>
+				  <th style="width: 30%; text-align: center;">Defense Steps</th>
+				  <th style="width: 70%; text-align: center;">Summary</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<!-- Step 1 -->
+				<tr class="defense-step-1">
+				  <td style="vertical-align: middle;"><strong>Step 1: Proactive testing<br>(Demonstrated in the real world)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Research explores LLMs for proactive cybersecurity testing, including automated 
+					penetration testing and vulnerability detection through code foundation models and AI-enhanced fuzzing. Real-world 
+					demonstrations exist but lack evidence of large-scale adoption. <br> 
+					<strong>Quantitative:</strong>AI penetration testing benchmarks remain nascent, with one end-to-end benchmark AutoPenBench. Vulnerability detection benchmarks show SOTA models achieve limited accuracy, but these benchmarks 
+					face challenges in data quality, limited code context, and insufficient test diversity.
+				  </td>
+				</tr>
+				<!-- Step 2 -->
+				<tr class="defense-step-2">
+				  <td style="vertical-align: middle;"><strong>Step 2: Attack detection<br>(Demonstrated in the real world)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Frontier AI addresses key limitations of traditional AI methods by eliminating 
+					manual feature engineering, reducing dependence on labeled datasets, and improving generalizability to 
+					out-of-distribution data. Real-world application exists in malware and network intrusion detection.<br>
+					<strong>Quantitative:</strong> Many benchmarks exist for network intrusion and malware detection but have data 
+					and label quality issues. Foundation model-driven detection shows high accuracy, calling for more challenging benchmarks.
+				  </td>
+				</tr>
+				<!-- Step 3 -->
+				<tr class="defense-step-3">
+				  <td style="vertical-align: middle;"><strong>Step 3: Triage &amp; forensic<br>(Demonstrated in research papers)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Frontier AI usages are at an early stage, including LLMs for vulnerability analysis, improving symbolic execution with PoC generation and developing AI agents for root cause analysis. Pre-trained foundation models demonstrate superior performance in binary analysis tasks. <br>
+					<strong>Quantitative:</strong> Recent benchmarks like CRUXEval show promising results for PoC generation with GPT-4o achieving 75% pass@1 success rate, while no public benchmark exists for comprehensive AI-driven reverse engineering evaluation.
+				  </td>
+				</tr>
+				<!-- Step 4-5 -->
+				<tr class="defense-step-4-5">
+				  <td style="vertical-align: middle;"><strong>Step 4-5: Remediation development &amp; deployment<br>(No demonstrated effect)</strong></td>
+				  <td>
+					<strong>Qualitative:</strong> Research demonstrates frontier AI can automatically generate security vulnerability patches, though real-world applications like the SQLite3 Off-by-One bug fix remain limited and no specific work exists on AI-assisted remediation deployment.<br>
+					<strong>Quantitative:</strong> SOTA systems using Claude 3.5 Sonnet resolve about 50% of issues in SWE-bench-verified. However, most SWE-bench issues are non-security bugs, revealing limitations in evaluating frontier AI's defense capabilities.
+				  </td>
+				</tr>
+				<!-- Defense for humans -->
+				<tr class="defense-for-humans">
+				  <td style="vertical-align: middle;"><strong>Defense for humans<br>(Demonstrated in the real world)</strong></td>
+				  <td>
+					Frontier AI shows promise for enhancing defenses against human-targeted attacks, including social bot detection, fraud detection, deepfake detection, and misinformation detection. However, defensive techniques struggle to keep pace with sophisticated attacks, highlighting the need for research on adversarial dynamics between defensive and attack AI systems.
+				  </td>
+				</tr>
+			  </tbody>
+			</table>
 			<p><strong>For attacks against systems</strong>, our research reveals a nuanced picture of AI-enabled attacks on systems. While AI-driven attacks have been successfully demonstrated in research settings, they have yet to make a significant impact at scale in real-world scenarios for many attack steps. Currently, the major real-world applications of AI in attacks are concentrated in the reconnaissance, weaponization, and final execution phases, with limited use in intermediate steps.</p>
 			<p>Benchmark evaluations show uneven AI performance across the attack lifecycle. In reconnaissance, basic AI agents—such as LLMs with tool access—show early success, identifying targets on remote networks and conducting surveillance. In the weaponization phase, capabilities are advancing but remain constrained: state-of-the-art commercial models like OpenAI-o1 and Claude 3.5 Sonnet can rival technical novices or cybersecurity apprentices in exploiting vulnerabilities. However, AI performance drops off significantly in later stages. For example, while GPT-4o can generate multi-stage attack sequences, it consistently has low success rates.</p>
 			<p>These findings underscore a key reality: <em>Despite recent breakthroughs in frontier AI, its practical offensive capabilities remain limited—particularly when it comes to executing full end-to-end cyberattacks.</em></p>
@@ -207,10 +424,49 @@
 			<p>We argue that <strong>frontier AI will likely benefit attackers more than defenders in the short term</strong> due to three key factors:</p>
 			<ul>
 			<li><strong>Equivalence Classes:</strong> Many AI capabilities designed for defense can be readily repurposed for offensive use. For example, techniques developed for penetration testing can enhance targeted attacks, and AI-generated patches may inadvertently aid exploit development. The table below shows examples of the key equivalence classes we identified in this dual-use context.</li>
-			<figure class="responsive-figure-larger">
+			<!--<figure class="responsive-figure-larger">
 			  <img src="figures/equivalence.PNG" alt="Equivalence">
 			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Equivalence classes: A list of defense and general capabilities that can also help attacks</a></figcaption>
-			</figure>
+			</figure>-->
+			<br>
+			<table>
+			<caption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Equivalence classes: A list of defense and general capabilities that can also help attacks</caption>
+			  <thead>
+				<tr>
+				  <th style="text-align: center;">Defense stage</th>
+				  <th style="text-align: center;">Defense capabilities</th>
+				  <th style="text-align: center;">Attack usages</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td style="vertical-align: middle;">Proactive testing</td>
+				  <td><ul><li>Pen. testing</li><li>Vulnerability detection</li></ul></td>
+				  <td><ul><li>Enable more targeted attacks</li><li>Find vulnerabilities in target systems</li></ul></td>
+				</tr>
+				<tr>
+				  <td style="vertical-align: middle;">Attack detection</td>
+				  <td><ul><li>ML-based threat detection</li><li>Lifelong monitoring</li></ul></td>
+				  <td><ul><li>Develop stronger evasion methods</li><li>Re-purpose it to monitor defenses</li></ul></td>
+				</tr>
+				<tr>
+				  <td style="vertical-align: middle;">Triage forensic</td>
+				  <td><ul><li>PoC &amp; root cause</li><li>Reverse engineering</li></ul></td>
+				  <td><ul><li>Facilitate localization &amp; exploitation</li><li>Understand targets and steal source code</li></ul></td>
+				</tr>
+				<tr>
+				  <td style="vertical-align: middle;">Remediation</td>
+				  <td><ul><li>Patch &amp; testing generation</li><li>Automated configuration</li></ul></td>
+				  <td><ul><li>Malware &amp; weapon &amp; exploit generation</li><li>Automated installation and gain access</li></ul></td>
+				</tr>
+				<tr>
+				  <td>Normal utilities</td>
+				  <td><ul><li>Multimodal generation</li></ul></td>
+				  <td><ul><li>Automated reconnaissance and delivery</li></td>
+				</tr>
+			  </tbody>
+			</table>
+			<br>
 			<li><strong>Fundamental Asymmetry:</strong> Beyond dual-use capabilities, a core asymmetry between attackers and defenders gives adversaries a disproportionate edge when leveraging frontier AI. This imbalance is driven by three key factors:</li>
 			<ul><li><strong>Asymmetry in Cost of Failures:</strong> Attackers need only one successful exploit, while defenders must protect against every attack. This low margin for error severely constrains defensive strategies. In AI-powered threat detection, both false positives and false negatives are costly—false positives disrupt operations, while a single false negative can compromise an entire system.</li>
 			<li><strong>Asymmetry in Remediation Deployment and Required Resources:</strong> Even with known fixes, remediation is slow and resource-intensive to deploy, requiring extensive testing, dependency resolution, global deployment, and post-deployment verification—all demanding significant resources and time. In contrast, attackers can operate with minimal resource requirements and compressed timelines, exploiting the gap between vulnerability discovery and complete patch deployment.</li>
@@ -230,14 +486,150 @@
 			<h3>How Should Society Better Prepare for the Frontier AI Era in Cybersecurity?</h3>
 			<p>Based on our findings, we recommend the following key actions for the security community.</p>
 			<p><strong>Continuous Comprehensive Marginal Risk Assessment:</strong> There is a pressing need to develop comprehensive, fine-grained benchmarks that rigorously evaluate AI capabilities across the full range of attack stages and hybrid system vulnerabilities. As illustrated in the following two tables, no comprehensive benchmark currently exists for assessing AI’s cybersecurity capabilities—highlighting a critical gap. High-quality benchmarks are essential, as they provide the foundation for quantifying AI-driven risks and informing key decisions. To be effective, these benchmarks must prioritize realism, ensuring that tasks and metrics reflect actual security challenges and capabilities. Just as importantly, they must be continuously updated to keep pace with the rapid evolution of frontier AI systems.</p>
-			<figure class="responsive-figure-larger">
+			<!--<figure class="responsive-figure-larger">
 			  <img src="figures/attack_benchmark.PNG" alt="attack benchmark">
-			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing attack benchmarks. The fully-filled, half-filled, empty circles mean all sub-steps are fully, partially, or not covered, respectively.</a></figcaption>
-			</figure>
-			<figure class="responsive-figure-larger">
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing attack benchmarks. The fully-filled, half-filled, empty circles mean all sub-steps are fully, partially, or not covered, respectively.</figcaption>
+			</figure>-->
+			<table>
+			<caption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing attack benchmarks. The fully-filled, half-filled, empty circles mean all sub-steps are fully, partially, or not covered, respectively.</caption>
+			  <thead>
+				<tr>
+				  <th colspan="2" style="text-align: center;">Attack step</th>
+				  <th style="text-align: center;">Coverage</th>
+				  <th style="text-align: center;">Metric</th>
+				  <th style="text-align: center;">Dynamic updates</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td style="text-align: center;">Step 1</td>
+				  <td style="text-align: center;">Reconnaissance</td>
+				  <td style="text-align: center;"><span class="half-circle"></span></td>
+				  <td style="text-align: center;">LLM judgment + Dynamic</td>
+				  <td style="text-align: center;" class="cross">✗</td>
+				</tr>
+				<tr>
+				  <td rowspan="2" style="text-align: center; vertical-align: middle;">Step 2</td>
+				  <td style="text-align: center;">Malware creation</td>
+				  <td style="text-align: center;"><span class="circle"></span></td>
+				  <td style="text-align: center;">VirusTotal</td>
+				  <td class="cross" style="text-align: center;">✗</td>
+				</tr>
+				<tr>
+				  <td style="text-align: center;">Vulnerability exploitation</td>
+				  <td style="text-align: center;"><span class="circle"></span></td>
+				  <td style="text-align: center;">Static + Dynamic</td>
+				  <td class="check" style="text-align: center;">✓</td>
+				</tr>
+				<tr>
+				  <td rowspan="3" style="text-align: center; vertical-align: middle;">Step 3-5</td>
+				  <td style="text-align: center;">Initial access &amp; delivery</td>
+				  <td style="text-align: center;"><span class="half-circle"></span></td>
+				  <td style="text-align: center;">LLM judgment + Dynamic</td>
+				  <td class="cross" style="text-align: center;">✗</td>
+				</tr>
+				<tr>
+				  <td style="text-align: center;">Exploitation &amp; installation</td>
+				  <td style="text-align: center;"><span class="half-circle"></span></td>
+				  <td style="text-align: center;">Dynamic</td>
+				  <td class="cross" style="text-align: center;">✗</td>
+				</tr>
+				<tr>
+				  <td style="text-align: center;">Persistence &amp; evasion</td>
+				  <td style="text-align: center;"><span class="empty-circle"></span></td>
+				  <td style="text-align: center;">NA</td>
+				  <td class="cross" style="text-align: center;">✗</td>
+				</tr>
+				<tr>
+				  <td style="text-align: center;">Step 6-7</td>
+				  <td style="text-align: center;">Remote control &amp; target location</td>
+				  <td style="text-align: center;"><span class="half-circle"></span></td>
+				  <td style="text-align: center;">LLM judgment + Dynamic</td>
+				  <td class="check" style="text-align: center;">✓</td>
+				</tr>
+			  </tbody>
+			</table>
+			<!--<figure class="responsive-figure-larger">
 			  <img src="figures/defense_benchmark.PNG" alt="defense benchmark">
-			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing defense benchmarks. "Vul. D" and "Att. D" refer to vulnerability detection and attack detection. "RT" is root cause and "RE" is reverse engineering. "Re. dev." and "Re. dep." stands for remediation development and remediation deployment.</a></figcaption>
-			</figure>
+			  <figcaption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing defense benchmarks. "Vul. D" and "Att. D" refer to vulnerability detection and attack detection. "RT" is root cause and "RE" is reverse engineering. "Re. dev." and "Re. dep." stands for remediation development and remediation deployment.</figcaption>
+			</figure> -->
+			<br><br>
+			
+			<table>
+			<caption style="margin-top: 0.1em; font-size: 0.9em; font-style: italic; color: #555;">Overview of existing defense benchmarks. "Vul. D" and "Att. D" refer to vulnerability detection and attack detection. "RT" is root cause and "RE" is reverse engineering. "Re. dev." and "Re. dep." stands for remediation development and remediation deployment.</caption>
+			  <thead>
+				<tr>
+				  <!-- Keep the "Step" header, but cells below will be blank -->
+				  <th colspan="2" style="text-align: center; vertical-align: middle;">Defense steps</th>
+				  <th style="text-align: center; vertical-align: middle;">Quantity</th>
+				  <th style="text-align: center; vertical-align: middle;">Notable examples</th>
+				  <th style="text-align: center; vertical-align: middle;">Key limitations</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<!-- Step 1 (two rows) -->
+				<tr>
+				  <!-- Blank cell for the step number -->
+				  <td rowspan="2" style="text-align: center; vertical-align: middle;">1</td>
+				  <td style="text-align: center; vertical-align: middle;">Pen. test</td>
+				  <td style="text-align: center; vertical-align: middle;">Few</td>
+				  <!-- Removed bracketed number -->
+				  <td style="text-align: center; vertical-align: middle;">AutoPenBench</td>
+				  <td rowspan="2" style="text-align: center; vertical-align: middle;">Limited attacks, target systems, metrics<br> Limited complexity and diversity, low-quality labels</td>
+				</tr>
+				<tr>
+				  <td style="text-align: center; vertical-align: middle;">Vul. D</td>
+				  <td style="text-align: center; vertical-align: middle;">Many</td>
+				  <!-- Removed bracketed numbers -->
+				  <td style="text-align: center; vertical-align: middle;">PrimeVul, FuzzBench, OSS-Fuzz</td>
+				</tr>
+
+				<!-- Step 2 (one row) -->
+				<tr>
+				  <td style="text-align: center; vertical-align: middle;">2</td>
+				  <td style="text-align: center; vertical-align: middle;">Att. D</td>
+				  <td style="text-align: center; vertical-align: middle;">Many</td>
+				  <!-- Removed bracketed numbers -->
+				  <td style="text-align: center; vertical-align: middle;">IDS2018, Drebin, BODMAS</td>
+				  <td style="text-align: center; vertical-align: middle;">Low-quality data and labels, lack OOD/hidden tests</td>
+				</tr>
+
+				<!-- Step 3 (two rows) -->
+				<tr>
+				  <td rowspan="2" style="text-align: center; vertical-align: middle;">3</td>
+				  <td style="text-align: center; vertical-align: middle;">PoC &amp; RT</td>
+				  <td style="text-align: center; vertical-align: middle;">Few</td>
+				  <!-- Removed bracketed number -->
+				  <td style="text-align: center; vertical-align: middle;">CRUXEval</td>
+				  <td rowspan="2" style="text-align: center; vertical-align: middle;">Low complexity, no benchmark for root cause<br> Data leakage; incomplete task coverage</td>
+				</tr>
+				<tr>
+				  <td style="text-align: center; vertical-align: middle;">Rev. Eng.</td>
+				  <td style="text-align: center; vertical-align: middle;">Many</td>
+				  <!-- Removed bracketed numbers -->
+				  <td style="text-align: center; vertical-align: middle;">ByteWeight, ReSym</td>
+				</tr>
+
+				<!-- Step 4 (one row) -->
+				<tr>
+				  <td style="text-align: center; vertical-align: middle;">4</td>
+				  <td style="text-align: center; vertical-align: middle;">Rem. Dev.</td>
+				  <td style="text-align: center; vertical-align: middle;">Few</td>
+				  <!-- Removed bracketed number -->
+				  <td style="text-align: center; vertical-align: middle;">SWE-bench</td>
+				  <td style="text-align: center; vertical-align: middle;">Noisy, no benchmark for security bugs; limited programming languages (PLs)</td>
+				</tr>
+
+				<!-- Step 5 (one row) -->
+				<tr>
+				  <td style="text-align: center; vertical-align: middle;">5</td>
+				  <td style="text-align: center; vertical-align: middle;">Rem. Dep.</td>
+				  <td style="text-align: center; vertical-align: middle;">None</td>
+				  <td style="text-align: center; vertical-align: middle;">None</td>
+				  <td style="text-align: center; vertical-align: middle;">N/A</td>
+				</tr>
+			  </tbody>
+			</table>
 			<p><strong>Enhanced Defense Development:</strong> To stay ahead of rapidly evolving threats, we recommend strategically leveraging frontier AI to strengthen every phase of the cybersecurity defense lifecycle.</p>
 			<ul><li><strong>Proactive Testing:</strong> Frontier AI can transform vulnerability discovery by augmenting and extending traditional methods. Promising directions include: designing advanced penetration testing and bug finding agents with robust planning capabilities, diverse toolsets, and strong program reasoning capabilities; enhancing static analysis using AI-driven state pruning; fine-tuning models specialized in reasoning about program states and vulnerabilities; and improving fuzzing via intelligent seed generation, adaptive mutation strategies, and grammar discovery. Together, these techniques can significantly improve our ability to identify vulnerabilities ahead of attackers.</li>
 			<li><strong>AI-Augmented Threat Detection:</strong> As cyber threats grow more dynamic, detection systems must evolve accordingly. Security-specific learning methods should be developed to handle challenges such as attack shifts and low-quality data. Combining AI-based detection with traditional rule-based systems can balance robustness, error tolerance, and scalability. To build trust and improve incident response, enhanced interpretability—through explainable alerts and actionable insights—should be a core design goal.</li>
