@@ -84,6 +84,35 @@
 		font-size: 1.1rem; /* Slightly smaller text */
 		line-height: 1.5; /* Slightly tighter line height */
 	}
+
+	.button-row {
+	  display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .spacer {
+      width: 80px;
+    }
+
+	.redirect-button {
+		max-width: 400px;
+		padding: 20px 25px;
+		background-color: #F5F5F5;
+		border-left: 4px solid #7F2B0A;
+		border-radius: 4px;
+		color: #7F2B0A;
+		font-size: 1.0rem;
+		font-family: 'IBM Plex Serif', serif;
+		font-weight: 700;
+		cursor: pointer;
+		text-align: left;
+		transition: background-color 0.3s ease;
+	}
+	.redirect-button:hover {
+      background-color: #e0e0e0;
+    }
 	.main-content {
             margin: 45px auto 0;
             padding: 0 10px;
@@ -257,12 +286,31 @@
 	   <p>We offer actionable recommendations: Constructing comprehensive fine-grained benchmarks for risk assessment, designing customized LLMs and AI agents for defense, developing robust security mechanisms and provable defenses for hybrid systems, enhancing pre-deployment security testing and ensuring transparency, and strengthening defenses for end users.</p><br>
 	   <p>By anticipating emerging trends and fostering collaboration among AI researchers, cybersecurity practitioners, and policymakers, we can navigate the AI revolution in a way that ultimately strengthens security for all.</p>
     </div> 
+
+	<div class="button-row">
+		<button class="redirect-button" onclick="window.location.href='benchmarks.html'">
+		  See Cybersecurity Benchmark
+		</button>
+	
+		<!--<div class="spacer"></div>
+	
+		<button class="redirect-button" onclick="window.location.href='https://arxiv.org/abs/2504.05408'">
+		  Read Paper
+		</button>
+	
+		<div class="spacer"></div>
+	
+		<button class="redirect-button" onclick="window.location.href='https://berkeley.qualtrics.com/jfe/form/SV_6zmYIqEyv7bfOrs'">
+		  Take Survey
+		</button>-->
+	</div>
+
     <div class="main-text">
         <div class="features-wrapper constraint">
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-12 mt-5 paragraph-spacing">
-		    <p><em><strong>Paper & Survey:</strong> To read our full paper, please visit <strong><a href="https://arxiv.org/abs/2504.05408">this link</a></strong>. We're also conducting a survey on this topic and would appreciate your participation. If you're interested, the survey is available at <strong><a href="https://berkeley.qualtrics.com/jfe/form/SV_6zmYIqEyv7bfOrs">this link</a></strong>.</em></p>
+			<p><em><strong>Paper & Survey:</strong> To read our full paper, please visit <strong><a href="https://arxiv.org/abs/2504.05408">this link</a></strong>. We're also conducting a survey on this topic and would appreciate your participation. If you're interested, the survey is available at <strong><a href="https://berkeley.qualtrics.com/jfe/form/SV_6zmYIqEyv7bfOrs">this link</a></strong>.</em></p>
 			<br>
 			<p>AI is rapidly reshaping critical sectors such as cybersecurity, healthcare, finance, and education. Frontier models are advancing at an unprecedented pace, showing striking gains in mathematics, coding, and scientific problem-solving, as illustrated in the figure below. This rapid progress brings urgent questions about <a href="https://arxiv.org/abs/2501.17805">a broad spectrum of AI-related risks</a>, with <a href="https://openai.com/global-affairs/disrupting-malicious-uses-of-ai/">cybersecurity</a> standing out as a top concern. The current trajectory suggests AI systems may soon possess far more potent "attack capabilities" than previously expected. As frontier AI evolves, addressing the rising cybersecurity threats becomes increasingly critical.</p>
 			<figure class="responsive-figure">
