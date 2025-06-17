@@ -84,12 +84,12 @@
 		font-size: 1.1rem; /* Slightly smaller text */
 		line-height: 1.5; /* Slightly tighter line height */
 	}
-
+	.observatory-blurb { margin: 0 0 0 0; } 
 	.button-row {
 	  display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 40px;
+      margin-top: 0;
     }
 
     .spacer {
@@ -97,13 +97,13 @@
     }
 
 	.redirect-button {
-		max-width: 400px;
+		max-width: 600px;
 		padding: 20px 25px;
-		background-color: #F5F5F5;
-		border-left: 4px solid #7F2B0A;
+		background-color: #9A4220; /*#F5F5F5;*/
+		/*border-left: 4px solid #7F2B0A;*/
 		border-radius: 4px;
-		color: #7F2B0A;
-		font-size: 1.0rem;
+		color: #FFFFF0; 
+		font-size: 1.3rem;
 		font-family: 'IBM Plex Serif', serif;
 		font-weight: 700;
 		cursor: pointer;
@@ -287,27 +287,21 @@
 	   <p>By anticipating emerging trends and fostering collaboration among AI researchers, cybersecurity practitioners, and policymakers, we can navigate the AI revolution in a way that ultimately strengthens security for all.</p>
     </div> 
 
-	<div class="button-row">
-		<button class="redirect-button" onclick="window.location.href='benchmarks.html'">
-		  Frontier AI Cybersecurity Observatory
-		</button>
-	
-		<!--<div class="spacer"></div>
-	
-		<button class="redirect-button" onclick="window.location.href='https://arxiv.org/abs/2504.05408'">
-		  Read Paper
-		</button>
-	
-		<div class="spacer"></div>
-	
-		<button class="redirect-button" onclick="window.location.href='https://berkeley.qualtrics.com/jfe/form/SV_6zmYIqEyv7bfOrs'">
-		  Take Survey
-		</button>-->
-	</div>
-
     <div class="main-text">
         <div class="features-wrapper constraint">
             <div class="row">
+			<p class="observatory-blurb">
+			  <strong>Follow</strong> how AI models improve in security with our
+			  <strong>Frontier-AI Cybersecurity Observatory</strong>. Visit the
+			  dashboard and add your latest results to keep it up to date!
+			</p>
+
+			<div class="button-row">
+			  <button class="redirect-button"
+					  onclick="window.open('benchmarks.html', '_blank');">
+				Go To Frontier-AI Cybersecurity Observatory
+			  </button>
+			</div>
                 <div class="col-1"></div>
                 <div class="col-12 mt-5 paragraph-spacing">
 			<p><em><strong>Paper & Survey:</strong> To read our full paper, please visit <strong><a href="https://arxiv.org/abs/2504.05408">this link</a></strong>. We're also conducting a survey on this topic and would appreciate your participation. If you're interested, the survey is available at <strong><a href="https://berkeley.qualtrics.com/jfe/form/SV_6zmYIqEyv7bfOrs">this link</a></strong>.</em></p>
