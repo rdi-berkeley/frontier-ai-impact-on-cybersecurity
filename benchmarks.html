@@ -36,34 +36,37 @@
         });
     </script>
 	<style>
-	:root { --brand:#7f2b0a; --brand-2:#9a4220; --ink:#1a1a1a; --ring:#e6e6e6; --bg:#ffffff; }
-	html, body { margin:0; padding:0; font-family:'IBM Plex Serif', serif; background:var(--bg); color:var(--ink); }
+		:root { --brand:#7f2b0a; --brand-2:#9a4220; --ink:#1a1a1a; --ring:#e6e6e6; --bg:#ffffff; }
+		html, body { margin:0; padding:0; font-family:'IBM Plex Serif', serif; background:var(--bg); color:var(--ink); }
 
 
-	/* --- TOP TABS (LINKS) --- */
-	.topnav { position:sticky; top:0; z-index:1000; background:#fff; border-bottom:1px solid var(--ring); }
-	.topnav-inner { max-width:1200px; margin:0 auto; padding:0 12px; }
-	.tablist { display:flex; gap:4px; align-items:flex-end; overflow-x:auto; -webkit-overflow-scrolling:touch; padding:10px 0 0; }
-
-	.tablink { display:inline-block; padding:10px 14px; text-decoration:none; color:#333; border:1px solid var(--ring); border-bottom:none; background:#fafafa; border-top-left-radius:8px; border-top-right-radius:8px; font-weight:700; white-space:nowrap; }
-	.tablink:hover { filter:brightness(1.04); }
-	.tablink[aria-current="page"] { color:var(--brand-2); background:#f0f0f0; box-shadow:0 -1px 0 #f0f0f0 inset; }
+		/* --- TOP TABS (LINKS) --- */
+		.topnav { position:sticky; top:0; z-index:1000; background:#fff; border-bottom:1px solid var(--ring); }
+		.topnav-inner { max-width:1200px; margin:0 auto; padding:0 12px; }
+		.tablist { display:flex; gap:4px; align-items:flex-end; overflow-x:auto; -webkit-overflow-scrolling:touch; padding:10px 0 0; }
 
 
-	/* spacer so page content doesn't butt against the tabs' border */
-	.tabpanes-edge { height:1px; background:#fff; box-shadow:0 1px 0 #fff inset; }
+		.tablink { display:inline-block; padding:10px 14px; text-decoration:none; color:#333; border:1px solid var(--ring); border-bottom:none; background:#fafafa; border-top-left-radius:8px; border-top-right-radius:8px; font-weight:700; white-space:nowrap; }
+		.tablink:hover { filter:brightness(1.04); }
+		.tablink[aria-current="page"] { color:var(--brand-2); background:#f0f0f0; box-shadow:0 -1px 0 #f0f0f0 inset; }
 
-	/* Demo content area placeholder (remove in your real pages) */
-	.placeholder { max-width:1000px; margin:28px auto; padding:0 12px; }
 
-	@media (max-width: 768px) {
-	.tablink { font-weight:600; padding:9px 12px; }
-	}
+		/* spacer so page content doesn't butt against the tabs' border */
+		.tabpanes-edge { height:1px; background:#fff; box-shadow:0 1px 0 #fff inset; }
+
+
+		/* Demo content area placeholder (remove in your real pages) */
+		.placeholder { max-width:1000px; margin:28px auto; padding:0 12px; }
+
+
+		@media (max-width: 768px) {
+		.tablink { font-weight:600; padding:9px 12px; }
+		}
 	</style>
 	
 </head>
 
-<body data-page="home"> 
+<body data-page="observatory">
 	<nav class="topnav" aria-label="Primary">
 		<div class="topnav-inner">
 		<div class="tablist" role="tablist">
@@ -82,7 +85,7 @@
 		const map = {
 		home: 'index.html',
 		paper: 'paper.html',
-		observatory: 'observatory.html',
+		observatory: 'benchmarks.html',
 		workshop: 'workshop.html'
 		};
 
@@ -105,23 +108,7 @@
 		if (isActive) a.setAttribute('aria-current', 'page');
 		});
 		})();
-	</script>
-
-    <div> <!-- style="border-bottom:3px solid #0066cc;"-->
-        <div class="constraint">
-            <div style="text-align: center;">
-                <h1>
-                    Frontier AI's Impact on the Cybersecurity Landscape
-                </h1>
-                
-                <!--<p style="font-size: 0.85em;">
-                    <sup>*</sup>Several authors have unlisted affiliations in addition to their listed university
-                    affiliation. This piece solely reflects the authors' personal views and not those of any affiliated
-                    organizations, including the listed universities.
-                </p> -->
-            </div>
-        </div>
-    </div>
+	</script> 
 
     <style>
 	.summary {
@@ -143,35 +130,24 @@
 		font-size: 1.1rem; /* Slightly smaller text */
 		line-height: 1.5; /* Slightly tighter line height */
 	}
-	.observatory-blurb { margin: 0 0 0 0; } 
-	.button-row {
-	  display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 0;
-    }
-
-    .spacer {
-      width: 80px;
-    }
 
 	.redirect-button {
-		max-width: 600px;
+		max-width: 400px;
+		margin: 40px auto; /* Centers the button horizontally and adds top/bottom spacing */
 		padding: 20px 25px;
-		background-color: #9A4220; /*#F5F5F5;*/
-		/*border-left: 4px solid #7F2B0A;*/
+		background-color: #F5F5F5;
+		border-left: 4px solid #7F2B0A;
 		border-radius: 4px;
-		color: #FFFFF0; 
-		font-size: 1.3rem;
+		color: #7F2B0A;
 		font-family: 'IBM Plex Serif', serif;
 		font-weight: 700;
+		font-size: 1.1rem;
 		cursor: pointer;
+		display: block;
 		text-align: left;
 		transition: background-color 0.3s ease;
 	}
-	.redirect-button:hover {
-      background-color: #e0e0e0;
-    }
+
 	.main-content {
             margin: 45px auto 0;
             padding: 0 10px;
@@ -217,6 +193,14 @@
 		height: auto;
 	}
 	
+	table {
+      width: 100%;
+      max-width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+	
 	th, td {
       padding: 8px 12px;
       border: 1px solid #000;
@@ -228,6 +212,44 @@
       background-color: #f2f2f2;
       font-weight: bold;
       text-align: left;
+    }
+
+    /* Example row colors (adjust as desired) */
+    /* Attack steps */
+    .attack-step-1 {
+      background-color: #FFBB94; /* Light orange */
+    }
+    .attack-step-2 {
+      background-color: #FFBB94; /* Slightly darker orange */
+    }
+    .attack-step-3-5 {
+      background-color: #FFBB94; 
+    }
+    .attack-step-6 {
+      background-color: #FFBB94;
+    }
+    .attack-step-7 {
+      background-color: #FF9999; /* Red */
+    }
+    .attack-against-humans {
+      background-color: #FF9999; /* Same red */
+    }
+
+    /* Defense steps */
+    .defense-step-1 {
+      background-color: #FFBB94;
+    }
+    .defense-step-2 {
+      background-color: #FFBB94; 
+    }
+    .defense-step-3 {
+      background-color: #FFFF99;
+    }
+    .defense-step-4-5 {
+      background-color: #B2FFB2;
+    }
+    .defense-for-humans {
+      background-color: #FFBB94;
     }
 
     /* Optional: make text wrap nicely */
@@ -292,55 +314,29 @@
     }
     </style>
 
-    
+	<div class="main-text">
 
-    <div class="main-text">
-        <div class="features-wrapper constraint">
-            <div class="row">
-			
-			<br>
-			<p>Artificial intelligence (AI) is evolving at an unprecedented pace, making it increasingly difficult to anticipate its societal impacts and risks. In the domain of cybersecurity, the dual role of AI—enhancing both offensive and defensive capabilities—intensifies this challenge. It is critical for developers, researchers, and policymakers to be informed in a timely manner.</p>
-			<p>To address this need, we're making various efforts including the following: 
-			
-			<ul>
-			<li><strong>Comprehensive Analysis of Current and Future Impacts: </strong> We present a comprehensive analysis of frontier AI's impact on cybersecurity using a marginal risk assessment framework and the cyber kill chain. Our findings indicate that its influence on the attack side is markedly more pronounced than on the defense side, especially in the area of remediation deployment. Human-targeted attacks leveraging frontier AI are already occurring on a large scale in the real world.</li>
-			<li><strong>Frontier AI Cybersecurity Observatory: </strong> This is a central hub and open platform for continuously tracking frontier AI capabilities in cybersecurity. By aggregating and maintaining cybersecurity benchmarks across various attack and defense steps, the observatory will enable systematic monitoring of AI cybersecurity capabilities across various attack and defense steps and provide early signals of potential imbalances between offensive and defensive AI capabilities. Moreover, such a central hub enables us to compare the existing benchmarks and identify a gap where communities need to develop better benchmarks and evaluation frameworks.</li>
-			<li><strong>Frontier AI Cybersecurity Workshop: </strong>This workshop brings together researchers and practitioners across AI and security to assess the current landscape of AI-enabled cyber threats and defenses, explore future risk prediction, and identify opportunities for collaboration.</li>
-			</ul></p>
-                </div>
-            </div>
-        </div>
+        <div class="features-wrapper constraint" style="font-family: 'IBM Plex Serif'">
 
-        <br>
-        <br><br><br>
+			<div style="display: flex; justify-content: center;">
+				<img src="figures/image.png" alt="Frontier AI Cybersecurity Observatory" style="max-width: 100%; height: auto;" />
+			</div>
+			<p>Tracking AI capabilities in cybersecurity is essential for understanding emerging impacts and risks. Our Frontier AI Cybersecurity Observatory provides a centralized platform that aggregates relevant benchmarks, enabling the community to more easily monitor and assess the evolving cybersecurity capabilities of AI systems.</p>
+			<p style="display: flex; justify-content: center;"><em>Want to add your own benchmark? Please visit <strong><a href="https://huggingface.co/spaces/FrontierAICybersecurity/Cybersecurity_leaderboard">our huggingface</a></strong> and follow the instruction for pull request!<em></p>
 
+		</div>
 
-        <style>
-            body {
-                font-family: 'IBM Plex Serif', serif;
-            }
+	</div>
 
-            .name {
-                font-weight: bold;
-                font-size: medium;
-            }
+	<br>
 
-            .details {
-                font-weight: normal;
-                font-size: small;
-            }
-
-            .signer ul {
-                list-style-type: none;
-                padding-left: 0;
-                margin: 0;
-            }
-
-            .signer li {
-                margin-bottom: 12px;
-            }
-        </style>
-
+    <div class="main-text" style="display: flex; justify-content: center;">
+		<iframe
+			src="https://FrontierAICybersecurity-Cybersecurity-leaderboard.hf.space"
+			frameborder="0"
+			width="1600"
+			height="900"
+		></iframe>
     </div>
 
 </body>
