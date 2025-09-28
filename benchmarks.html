@@ -69,8 +69,7 @@
 	<nav class="topnav" aria-label="Primary">
 		<div class="topnav-inner">
 		<div class="tablist" role="tablist">
-		<a class="tablink" href="index.html" id="tab-home" role="tab">Home</a>
-		<a class="tablink" href="paper.html" id="tab-paper" role="tab">Paper</a>
+		<a class="tablink" href="index.html" id="tab-paper" role="tab">Paper</a>
 		<a class="tablink" href="benchmarks.html" id="tab-observatory" role="tab">Observatory</a>
 		<a class="tablink" href="workshop.html" id="tab-workshop" role="tab">Workshop</a>
 		</div>
@@ -82,8 +81,7 @@
 		// Highlight the active tab based on filename OR optional data-page attribute.
 		(function() {
 		const map = {
-		home: 'index.html',
-		paper: 'paper.html',
+		paper: 'index.html',
 		observatory: 'benchmarks.html',
 		workshop: 'workshop.html'
 		};
@@ -322,8 +320,18 @@
 			<div style="display: flex; justify-content: center;">
 				<img src="figures/image.png" alt="Frontier AI Cybersecurity Observatory" style="max-width: 100%; height: auto;" />
 			</div>
-			<p>Tracking AI capabilities in cybersecurity is essential for understanding emerging impacts and risks. Our Frontier AI Cybersecurity Observatory provides a centralized platform that aggregates relevant benchmarks, enabling the community to more easily monitor and assess the evolving cybersecurity capabilities of AI systems.</p>
-			<p style="display: flex; justify-content: center;"><em>Want to add your own benchmark? Please visit <strong><a href="https://huggingface.co/spaces/FrontierAICybersecurity/Cybersecurity_leaderboard">our huggingface</a></strong> and follow the instruction for pull request!<em></p>
+			<p>Artificial intelligence (AI) is evolving at an unprecedented pace, making it increasingly difficult to anticipate its societal impacts and risks. For example, recent benchmarks such as <a href="https://www.cybergym.io/">CyberGym</a> and <a href="https://bountybench.github.io/">BountyBench</a> have demonstrated that AI agents can already tackle real-world cybersecurity tasks, including zero-day discovery. In cybersecurity, AI plays a dual role—strengthening both offensive and defensive capabilities. It is therefore critical for developers, researchers, and policymakers to stay informed in a timely manner.</p>
+
+			<p>To address this need, we are implementing the <strong>“Frontier AI Cybersecurity Observatory”</strong>, a central hub and open platform for continuously tracking frontier AI capabilities in cybersecurity. By aggregating and maintaining cybersecurity benchmarks across various attack and defense stages, the observatory will enable the following:</p> <ul> <li>Systematic monitoring of AI cybersecurity capabilities across different stages of attack and defense, providing early signals of potential imbalances between offensive and defensive AI capabilities</li> <li>Comparison of existing benchmarks to identify gaps where communities need to develop improved benchmarks and evaluation frameworks</li> <li>Identification of which models perform best across different attack and defense stages</li> </ul>
+			</ul>
+			<h3>Want to add your own benchmark?</h3>
+			<p>Please visit <a href="https://huggingface.co/spaces/FrontierAICybersecurity/Cybersecurity_leaderboard">our huggingface</a> and contribute by submitting a pull request!</p>
+			<h3>Have suggestions to improve the observatory?</h3>
+			<p>
+			  As this is an early-stage effort, we are actively gathering feedback from the community and would greatly value your input. Please share your suggestions 
+			  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLRtJEiZ-DiGLvO0suRMWeTTNY5hK5ULcKQRqvvrEherGEaA/viewform?usp=header">here</a>.
+			</p> 
+			<!--<p style="display: flex; justify-content: center;"><em>Want to add your own benchmark? Please visit <strong><a href="https://huggingface.co/spaces/FrontierAICybersecurity/Cybersecurity_leaderboard">our huggingface</a></strong> and follow the instruction for pull request!<em></p>-->
 
 		</div>
 
